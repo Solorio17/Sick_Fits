@@ -1,7 +1,7 @@
-import React from 'react';
+import Items from '../components/Items';
 
-const Index = props =>{
-    return <p>Hello from index</p>
+const Home = props =>{
+    return <div> <Items/> </div>
 }
 
-export default Index;
+export default Home;
