@@ -1,5 +1,5 @@
 # source: https://us1.prisma.sh/jason-solorio-828c3c/sick_fits/dev
-# timestamp: Fri Nov 30 2018 17:52:41 GMT-0700 (Mountain Standard Time)
+# timestamp: Mon Dec 03 2018 14:15:30 GMT-0700 (Mountain Standard Time)
 
 type AggregateItem {
   count: Int!
