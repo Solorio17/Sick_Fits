@@ -1,7 +1,7 @@
-import React from 'react';
+import CreateItem from '../components/createItem';
 
 const Sell = props =>{
-    return <p>Hello from sell</p>
+    return <CreateItem/>
 }
 
 export default Sell;
