@@ -5,7 +5,6 @@ import Form from './styles/Form';
 import formatMoney from '../lib/formatMoney';
 import Error from './ErrorMessage';
 import Router from 'next/router';
-import { format } from 'date-fns';
 
 const CREATE_ITEM_MUTATION = gql`
     mutation CREATE_ITEM_MUTATION(
@@ -26,7 +25,6 @@ const CREATE_ITEM_MUTATION = gql`
         }
     }
 `;
-
 
 class CreateItem extends Component{
     state = {
