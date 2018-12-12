@@ -16,7 +16,6 @@ Router.onRouteChangeError = () =>{
     NProgress.done()
 }
 
-
 const Logo = styled.h1`
     font-size: 4rem;
     margin-left: 2rem;
@@ -69,8 +68,6 @@ const Header = () =>(
         <div className="sub-bar">
             <p>Search</p>
         </div>
-
-        <div>Cart</div>
     </StyledHeader>
 )
 
