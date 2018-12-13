@@ -16,7 +16,7 @@ class DeleteItem extends Component{
         //Manually update cache on the client, so it matches server
         //1. Read cache for items
         const data = cache.readQuery({ query : ALL_ITEMS_QUERY });
-        console.log(data, payload);
+        // console.log(data, payload);
         //2. Filter deleted item out of the page
         data.items = data.items.filter(item => item.id !== payload.data.deleteItem.id);
         //3. Put items back
