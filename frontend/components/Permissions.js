@@ -100,7 +100,7 @@ class User extends Component{
         }
 
         this.setState({ permissions: updatedPermissions });
-        console.log(updatedPermissions);
+        // console.log("Perrs"+ updatedPermissions);
     }
 
     render(){
