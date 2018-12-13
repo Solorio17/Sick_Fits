@@ -11,13 +11,13 @@ const AnimationStyles = styled.span`
         transition: all 0.5s;
         backface-visibility: hidden
     }
-    .count-enter-done{
+    .count-enter{
         transform: rotateX(0.5turn);
     }
     .count-enter-active{
         transform: rotateX(0)
     }
-    .count-exit-done{
+    .count-exit{
         top: 0;
         position: absolute;
         transform: rotateX(0)
