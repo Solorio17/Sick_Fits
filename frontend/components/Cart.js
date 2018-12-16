@@ -10,7 +10,7 @@ import Supreme from './styles/Supreme';
 import CloseButton from './styles/CloseButton';
 import CartItem from './CartItem';
 import User from './User';
-
+import CreditCard from './CreditCard';
 
 const LOCAL_STATE_QUERY = gql`
     query{
@@ -48,7 +48,9 @@ const Cart = () => {
 
                         <footer>
                             <p>Total: {formatMoney(calcTotalPrice(me.cart))}</p>
-                            <SickButton>Checkout</SickButton>
+                            <CreditCard>
+                                <SickButton>Checkout</SickButton>
+                            </CreditCard>
                         </footer>
                     </CartStyles>
                 )
