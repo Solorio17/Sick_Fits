@@ -31,6 +31,7 @@ server.express.use(async (req, res, next) => {
 });
 
 //allow this endpoint to be visited from approved urls
+//Start it!
 server.start({
     cors: {
         credentials: true,
