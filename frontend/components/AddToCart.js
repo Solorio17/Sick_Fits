@@ -23,10 +23,11 @@ class AddToCart extends Component{
                 }}
                 refetchQueries={[{ query: CURRENT_USER_QUERY }]}
             >
-                {(addToCart, { error, loading}) => <button onClick={addToCart} disabled={loading}>Add{loading && 'ing'} to cart</button>}
+                {(addToCart, { error, loading}) => <button className="adding" onClick={addToCart} disabled={loading}>Add{loading && 'ing'} to cart</button>}
             </Mutation>
         )
     }
 }
 
 export default AddToCart;
+export { ADD_TO_CART_MUTATION };
