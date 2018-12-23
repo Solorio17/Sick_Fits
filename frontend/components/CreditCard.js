@@ -30,7 +30,7 @@ function totalItems(cart){
 class CreditCard extends Component{
     onToken = async (res, createOrder) =>{
         NProgress.start();
-        console.log(res.id)
+        // console.log(res.id)
         //manually call mutation once we have stripe token
         const order = await createOrder({
             variables: {
@@ -47,7 +47,11 @@ class CreditCard extends Component{
     render(){
         return(
             <User>
-                {({data: { me }}) => (
+                {({data: { me }, loading }) => {
+
+                if(loading) return null;
+                
+                return (
                     <Mutation mutation={CREATE_ORDER_MUTATION} refetchQueries={[{ query: CURRENT_USER_QUERY }]}> 
                         {(createOrder) => (
                         
@@ -65,10 +69,11 @@ class CreditCard extends Component{
                         </StripeCheckout>
                         )}
                     </Mutation>
-                )}
+                )}}
             </User>
         )
     }
 }
 
 export default CreditCard;
+export { CREATE_ORDER_MUTATION };
