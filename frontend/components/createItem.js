@@ -52,7 +52,7 @@ class CreateItem extends Component{
             body: data
         })
         const file = await res.json();
-        console.log('uploadImage' + file);
+        // console.log(file);
         this.setState({
             image: file.secure_url,
             largeImage: file.eager[0].secure_url
@@ -65,14 +65,16 @@ class CreateItem extends Component{
                 {( createItem, { loading, error }) =>(
 
            
-            <Form onSubmit={async e =>{
+            <Form 
+                data-test='form'
+                onSubmit={async e =>{
                 e.preventDefault(); //prevents url addition on submit
                 const res = await createItem() // calls mutation
                 Router.push({
                     pathname: '/item',
                     query: {id: res.data.createItem.id }
                 })
-                console.log(res)
+                // console.log(res)
             }}>
             <Error error={error}/>
                 <fieldset disabled={loading} aria-busy={loading}>
