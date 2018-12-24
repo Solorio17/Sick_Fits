@@ -33,10 +33,7 @@ server.express.use(async (req, res, next) => {
 //allow this endpoint to be visited from approved urls
 //Start it!
 server.start({
-    cors: {
-        credentials: true,
-        origin: process.env.FRONTEND_URL, //same port frontend runs on
-    }
+ 
 }, success => {
     console.log(`Server is now running on port http://localhost:${success.port}`)
 })
