@@ -32,6 +32,7 @@ class RequestReset extends Component{
             
             return( 
             <Form 
+                data-test="form"
                 method="post" 
                 onSubmit={ async e => {
                     e.preventDefault();
@@ -42,7 +43,7 @@ class RequestReset extends Component{
                 <fieldset disabled={loading} aria-busy={loading}>
                     <h2>Request a password reset</h2>
                     <Error error={error}/>
-                    {!error && !loading && called && <p>Successful! Check your email for reset link.</p>}
+                    {!error && !loading && called && <p data-test="paragraph">Successful! Check your email for reset link.</p>}
                     <label htmlFor="email">
                         Email
                         <input 
@@ -63,3 +64,4 @@ class RequestReset extends Component{
 }
 
 export default RequestReset;
+export { REQUEST_RESET_MUTATION };
