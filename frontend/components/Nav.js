@@ -9,7 +9,7 @@ import CartCount from './CartCount';
 const Nav = () =>(
     <User>
         {({data: { me }}) => /**console.log('User_Me' + me) || */ (
-        <NavStyles>
+        <NavStyles data-test="nav">
             <Link href="/items">
                 <a>Shop</a>
             </Link>
